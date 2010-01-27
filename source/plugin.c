@@ -522,7 +522,7 @@ s32 DI_EmulateIoctl(ioctl *buffer, s32 fd)
 
 		/* Clear cover interrupt */
 		if (res)
-			BIT_SET(config.cover, 4);
+			BIT_DEL(config.cover, 4);
 		else
 			ret = DI_HandleIoctl(buffer, fd);
 
